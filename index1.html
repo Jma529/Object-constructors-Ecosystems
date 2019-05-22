@@ -23,21 +23,24 @@
     <button class="btn3">Desert</button>
     <div class="imagesound">
         <img id="image">
-        <input type="button" value="PLAY" onclick="playAudio();">
+        <input type="button" value="PLAY" onclick="playAudio()">
         </input>
         <audio id="audio">
         </audio>
     </div>
     <script>
           function playAudio() {
-              if(document.getElementById('image').src == "monkies.jpg") {
-                let audio = document.getElementById("audio").src = "monkey2.mp3";
-              } else if(document.getElementById('image').src == "polarbears.jpg") {
-                let audio = document.getElementById("audio").src = "bear_polar.wav";
-              }
+            
+                let audio = document.getElementById("audio");
+                audio.src="monkey2.mp3";
+            //   } else if(document.getElementById('image').src == "polarbears.jpg") {
+            //     let audio = document.getElementById("audio")
+            //     audio.src = "bear_polar.wav";
                 audio.play();
-    
+                console.log(audio);
             }
+
+         
         // Copy the index.html and replace everything inside the onLoad function with your own logic
         // Should have a different constructor (e.g. animal, spaceship, or some other real world entity)
         // Should have two seperate instances of the constructor
