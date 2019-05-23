@@ -14,11 +14,6 @@
 
 <body onload="onLoaded()">
 
-
-    <!-- <img class="monkeys" src="images/monkies.jpg">
-    <img class="bears" src="images/polarbears.jpg">
-    <img class="coyote" src="images/coyotes.jpg"> -->
-    <!-- Two buttons-->
     <div class="ecosystems">
         <div class="ecosystem one">
 
@@ -26,9 +21,9 @@
                 <button class="btn1">Tropical rainforest</button>
                 <img class="image" id="imageone">
             </div>
-            <input type="button" value="PLAY" onclick="playAudio()">
+            <input type="button" class = "soundbutton1" value="PLAY" onclick="playAudio()">
             </input>
-            <audio id="audio">
+            <audio id="audio1">
                 <source src="sounds/monkey2.mp3">
             </audio>
 
@@ -39,9 +34,9 @@
                 <button class="btn2">Tundra</button>
                 <img class="image" id="imagetwo">
             </div>
-            <input type="button" value="PLAY" onclick="playAudio()">
+            <input type="button" class = "soundbutton2" value="PLAY" onclick="playAudio()">
             </input>
-            <audio id="audio1">
+            <audio id="audio2">
                 <source src="sounds/bear_polar.wav">
 
             </audio>
@@ -52,9 +47,9 @@
                 <button class="btn3">Desert</button>
                 <img class="image" id="imagethree">
             </div>
-            <input type="button" value="PLAY" onclick="playAudio()">
+            <input type="button" class = "soundbutton3" value="PLAY" onclick="playAudio()">
             </input>
-            <audio id="audio2">
+            <audio id="audio3">
                 <source src="sounds/Coyote.mp3">
             </audio>
 
@@ -64,22 +59,22 @@
                 <button class="btn4">Temperate Forest</button>
                 <img class="image" id="imagefour">
             </div>
-            <input type="button" value="PLAY" onclick="playAudio()">
+            <input type="button" class = "soundbutton4" value="PLAY" onclick="playAudio()">
             </input>
-            <audio id="audio2">
-                <source src="Coyote.mp3">
+            <audio id="audio4">
+                <source src="sounds/Squirrel.mp3">
             </audio>
 
         </div>
         <div class="ecosystem five">
             <div class="card five">
-                <button class="btn5">Grasslands</button>
+                <button class="btn5">Savannah</button>
                 <img class="image" id="imagefive">
             </div>
-            <input type="button" value="PLAY" onclick="playAudio()">
+            <input type="button" class = "soundbutton5" value="PLAY" onclick="playAudio()">
             </input>
-            <audio id="audio2">
-                <source src="Coyote.mp3">
+            <audio id="audio5">
+                <source src="sounds/lion.mp3">
             </audio>
 
         </div>
@@ -88,10 +83,10 @@
                     <button class="btn6">Taiga</button>
                     <img class="image" id="imagesix">
                 </div>
-                <input type="button" value="PLAY" onclick="playAudio()">
+                <input type="button" class = "soundbutton6" value="PLAY" onclick="playAudio()">
                 </input>
-                <audio id="audio2">
-                    <source src="Coyote.mp3">
+                <audio id="audio6">
+                    <source src="sounds/wolf.mp3">
                 </audio>
     
             </div>
@@ -100,10 +95,35 @@
                         <button class="btn7">Ocean</button>
                         <img class="image" id="imageseven">
                     </div>
-                    <input type="button" value="PLAY" onclick="playAudio()">
+                    <input type="button" class = "soundbutton7" value="PLAY" onclick="playAudio()">
                     </input>
-                    <audio id="audio2">
-                        <source src="Coyote.mp3">
+                    <audio id="audio7">
+                        <source src="sounds/Shark.mp3">
+                    </audio>
+        
+                </div>
+                <div class="ecosystem eight">
+                    <div class="card eight">
+                        <button class="btn8">Sky</button>
+                        <img class="image" id="imageeight">
+                    </div>
+                    <input type="button" class = "soundbutton8" value="PLAY" onclick="playAudio()">
+                    </input>
+                    <audio id="audio8">
+                        <source src="sounds/Birds.mp3">
+                    </audio>
+        
+                </div>
+
+                <div class="ecosystem nine">
+                    <div class="card nine">
+                        <button class="btn9">Grasslands</button>
+                        <img class="image" id="imagenine">
+                    </div>
+                    <input type="button" class = "soundbutton9" value="PLAY" onclick="playAudio()">
+                    </input>
+                    <audio id="audio9">
+                        <source src="sounds/Cow.mp3">
                     </audio>
         
                 </div>
@@ -113,16 +133,8 @@
 
 
     <script>
-        // Copy the index.html and replace everything inside the onLoad function with your own logic
-        // Should have a different constructor (e.g. animal, spaceship, or some other real world entity)
-        // Should have two seperate instances of the constructor
-        // Btn click event should invoke a function of objects and alert a result
-
-        //Try add a 3rd button and object
-
-
+       
         function ecoSystem(name, weather, animal) {
-
             this.name = name;
             this.weather = weather;
             this.animal = animal;
@@ -131,211 +143,83 @@
             };
         }
 
-
-
         // three instances of ecosystems
         var rainForest = new ecoSystem('tropical rainforest', 'humid', 'monkeys');
         var tundra = new ecoSystem('tundra', 'cold', 'polar bears');
         var desert = new ecoSystem('desert', 'hot', 'coyotes');
         var temperateForest = new ecoSystem('temperate forest', 'fresh', 'squirrels');
-        var grasslands = new ecoSystem('grasslands', 'dry', 'lions');
+        var savannah = new ecoSystem('savannah', 'dry', 'lions');
         var taiga = new ecoSystem('taiga', 'snowy', 'wolves');
         var ocean = new ecoSystem('ocean', 'vast', 'sharks');
-
+        var sky = new ecoSystem('sky', 'high', 'birds');
+        var grasslands = new ecoSystem('grasslands', 'hot', 'cows')
 
         document.addEventListener('click', function (e) {
 
             if (event.target.classList.contains("btn1")) {
                 document.getElementById("imageone").src = "images/monkies.jpg";
-                //    console.log('Ecosystem one is a ' +rainForest.name + ' that is ' + rainForest.weather +  ' that has ' + rainForest.animal);
-                document.querySelector('#info').innerHTML = 'The ' + rainForest.info();
-                //    document.querySelector('.monkeys').classList.add('active');
-                //    removeClass();
-                //    document.querySelector('.bears').classList.remove('active');
-                //    document.querySelector('.coyote').classList.remove('active');
+                document.querySelector('.btn1').innerHTML = 'The ' + rainForest.info();
             } else if (event.target.classList.contains("btn2")) {
                 document.getElementById("imagetwo").src = "images/polarbears.jpg";
-                document.querySelector('#info').innerHTML = 'The ' + tundra.info();
-                //    document.querySelector('.bears').classList.toggle('active');
+                document.querySelector('.btn2').innerHTML = 'The ' + tundra.info();
             } else if (event.target.classList.contains("btn3")) {
                 document.getElementById("imagethree").src = "images/coyotes.jpg";
-                document.querySelector('#info').innerHTML = 'The ' + desert.info();
-                //    document.querySelector('.coyote').classList.toggle('active');
+                document.querySelector('.btn3').innerHTML = 'The ' + desert.info();
             } else if (event.target.classList.contains("btn4")) {
                 document.getElementById("imagefour").src = "images/squirrel.jpg";
-                document.querySelector('#info').innerHTML = 'The ' + temperateForest.info();
+                document.querySelector('.btn4').innerHTML = 'The ' + temperateForest.info();
             } else if (event.target.classList.contains("btn5")) {
                 document.getElementById("imagefive").src = "images/lion.jpg";
-                document.querySelector('#info').innerHTML = 'The ' + grasslands.info();
-                //    
+                document.querySelector('.btn5').innerHTML = 'The ' + savannah.info() + ".";
             } else if (event.target.classList.contains("btn6")) {
                 document.getElementById("imagesix").src = "images/wolves.jpg";
-                document.querySelector('#info').innerHTML = 'The ' + taiga.info();
-                //    
+                document.querySelector('.btn6').innerHTML = 'The ' + taiga.info();
             } else if (event.target.classList.contains("btn7")) {
                 document.getElementById("imageseven").src = "images/sharks.jpg";
-                document.querySelector('#info').innerHTML = 'The ' + ocean.info();
-                //    
+                document.querySelector('.btn7').innerHTML = 'The ' + ocean.info();
+            }  else if (event.target.classList.contains("btn8")) {
+                document.getElementById("imageeight").src = "images/birds.jpg";
+                document.querySelector('.btn8').innerHTML = 'The ' + sky.info(); 
+            }  else if (event.target.classList.contains("btn9")) {
+                document.getElementById("imagenine").src = "images/cow.jpg";
+                document.querySelector('.btn9').innerHTML = 'The ' + grasslands.info(); 
             }
 
 
 
 
         });
-
-        //    
+  
         function playAudio() {
+           
+            document.addEventListener('click', function (e) {
+                if (event.target.classList.contains("soundbutton1")) {
+                    var audio = document.getElementById("audio1");
+                } else if (event.target.classList.contains("soundbutton2")){
+                    var audio = document.getElementById("audio2");
+                } else if (event.target.classList.contains("soundbutton3")){
+                    var audio = document.getElementById("audio3");
+                } else if (event.target.classList.contains("soundbutton4")) {
+                    var audio = document.getElementById("audio4");
+                } else if (event.target.classList.contains("soundbutton5")) {
+                    var audio = document.getElementById("audio5");
+                } else if (event.target.classList.contains("soundbutton6")) {
+                    var audio = document.getElementById("audio6");
+                } else if (event.target.classList.contains("soundbutton7")) {
+                    var audio = document.getElementById("audio7");
+                } else if (event.target.classList.contains("soundbutton8")) {
+                    var audio = document.getElementById("audio8");
+                } else if (event.target.classList.contains("soundbutton9")) {
+                    var audio = document.getElementById("audio9");
+                } 
+                audio.play();
+            
+        });
+        };
 
-            let audio = document.getElementById("audio");
-            audio.src = "sounds/monkey2.mp3";
-            //   } else if(document.getElementById('image').src == "polarbears.jpg") {
-            //     let audio = document.getElementById("audio")
-            //     audio.src = "bear_polar.wav";
-            audio.play();
-            console.log(audio);
-        }
-
-                    if (event.target.classList.contains("btn1")) {
-                        document.getElementById("imageone").src = "images/monkies.jpg";
-                        
-                        //    console.log('Ecosystem one is a ' +rainForest.name + ' that is ' + rainForest.weather +  ' that has ' + rainForest.animal);
-                        document.querySelector('.info').innerHTML = 'The ' + rainForest.info();
-                        //    document.querySelector('.monkeys').classList.add('active');
-                        //    removeClass();
-                        //    document.querySelector('.bears').classList.remove('active');
-                        //    document.querySelector('.coyote').classList.remove('active');
-                    } else if (event.target.classList.contains("btn2")) {
-                        document.getElementById("imagetwo").src = "images/polarbears.jpg";
-                        document.querySelector('.info').innerHTML = 'The ' + tundra.info();
-                        //    document.querySelector('.bears').classList.toggle('active');
-                    } else if (event.target.classList.contains("btn3")) {
-                        document.getElementById("imagethree").src = "images/coyotes.jpg";
-                        document.querySelector('.info').innerHTML = 'The ' + desert.info();
-                        //    document.querySelector('.coyote').classList.toggle('active');
-                    } else if (event.target.classList.contains("btn4")) {
-                        document.getElementById("imagefour").src = "images/squirrel.jpg";
-
-
-        // function playAudio() {
-        //     var audio = document.getElementById("audio");
-        //     var audio1 = document.getElementById("audio1");
-        //     var audio2 = document.getElementById("audio2");
-        //     var elem = document.getElementById("image");
-        //     console.log(elem.src);
-        //     if (elem.src == "<?php $_SERVER["
-        //         DOCUMENT_ROOT "]?>images/monkies.jpg") {
-        //         audio.play();
-        //     } else if (elem.src ==
-        //         "file:///C:/xampp/htdocs/Object-constructors-Ecosystems/images/polarbears.jpg") {
-        //         audio1.play();
-        //     } else if (elem.src ==
-        //         "file:///C:/xampp/htdocs/Object-constructors-Ecosystems/images/coyotes.jpg") {
-        //         audio2.play();
-        //     }
-        // let audio = document.getElementById("audio");
-        // audio.src="monkey2.mp3";
-        // } else if (elem.src == "images/polarbears.jpg") {
-        //     let audio = document.getElementById("audio");
-        //   audio.src = "bear_polar.wav"
-        // }
-        //   } else if(document.getElementById('image').src == "polarbears.jpg") {
-        //     let audio = document.getElementById("audio")
-        //     audio.src = "bear_polar.wav";
-
-                });
-                //    
-                function playAudio() {
-                    let audio = document.getElementById("audio");
-                        audio.src = "monkey2.mp3";
-                        audio.play();
-                    // let audio = document.getElementById("audio");
-                    // audio.src = "monkey2.mp3";
-                    //   } else if(document.getElementById('image').src == "polarbears.jpg") {
-                    //     let audio = document.getElementById("audio")
-                    //     audio.src = "bear_polar.wav";
-                    // audio.play();
-                    console.log(audio);
-                }
-
-
-
-                // function playAudio() {
-                //     var audio = document.getElementById("audio");
-                //     var audio1 = document.getElementById("audio1");
-                //     var audio2 = document.getElementById("audio2");
-                //     var elem = document.getElementById("image");
-                //     console.log(elem.src);
-                //     if (elem.src == "<?php $_SERVER["
-                //         DOCUMENT_ROOT "]?>images/monkies.jpg") {
-                //         audio.play();
-                //     } else if (elem.src ==
-                //         "file:///C:/xampp/htdocs/Object-constructors-Ecosystems/images/polarbears.jpg") {
-                //         audio1.play();
-                //     } else if (elem.src ==
-                //         "file:///C:/xampp/htdocs/Object-constructors-Ecosystems/images/coyotes.jpg") {
-                //         audio2.play();
-                //     }
-                // let audio = document.getElementById("audio");
-                // audio.src="monkey2.mp3";
-                // } else if (elem.src == "images/polarbears.jpg") {
-                //     let audio = document.getElementById("audio");
-                //   audio.src = "bear_polar.wav"
-                // }
-                //   } else if(document.getElementById('image').src == "polarbears.jpg") {
-                //     let audio = document.getElementById("audio")
-                //     audio.src = "bear_polar.wav";
-
-
-
-
-
-        // Copy the index.html and replace everything inside the onLoad function with your own logic
-        // Should have a different constructor (e.g. animal, spaceship, or some other real world entity)
-        // Should have two seperate instances of the constructor
-        // Btn click event should invoke a function of objects and alert a result
-
-        //Try add a 3rd button and object
-
-
-        // btn1 Click
-        // alert ecosystem1 
-
-        //     let activeArray = Array.from(document.querySelectorAll('.active'));
-
-        //     function removeClass() {
-        //         activeArray.forEach(node => {
-        //             node.classList.remove('active');
-        //         })
-
-        //    };
-
-
-        // btn2 Click
-        // alert ecosystem2
-
-        //    document.querySelector('#btn2').addEventListener('click', function(e) {
-        //    console.log('Ecosystem two is a ' +tundra.name + ' that is ' +  tundra.weather + ' that has ' + tundra.animal);
-
-
-
-        //    });
-        //  alert ecosystem3
-
-        //    document.querySelector('#btn3').addEventListener('click', function(e) {
-        //    console.log('Ecosystem three is a ' + desert.name + ' that is ' + desert.weather + ' that has ' + desert.animal);
-
-
-
-        //    });
-
-        //    Try give the contructor a method called getName that returns both the first and last name as one string
-
-        //    console.log('The ecosystem is a' + rainForest.info());
+                  
         function onLoaded() {
             document.querySelector('#info').innerHTML = 'Click to see the result appear!';
-
-
-
         }
     </script>
 </body>
