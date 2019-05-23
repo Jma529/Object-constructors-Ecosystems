@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" type="text/css" rel="stylesheet">
     <H1>Learn about the Ecosystems!</H1>
-
+    <?php echo $_SERVER['DOCUMENT_ROOT']?>
 </head>
 
 <body onload="onLoaded()">
@@ -59,6 +59,10 @@ if (event.target.classList.contains("btn1")) {
     document.getElementById("image").src = "images/monkies.jpg";
     //    console.log('Ecosystem one is a ' +rainForest.name + ' that is ' + rainForest.weather +  ' that has ' + rainForest.animal);
     document.querySelector('#info').innerHTML = 'The ' + rainForest.info();
+    // var buttonClicked = this.event.target.value;
+    // console.log("Button was " + buttonClicked);
+    var audio = document.getElementById("audio");
+  playAudio('audio');
     //    document.querySelector('.monkeys').classList.add('active');
     //    removeClass();
     //    document.querySelector('.bears').classList.remove('active');
@@ -78,19 +82,22 @@ if (event.target.classList.contains("btn1")) {
 
 });
 
-          function playAudio() {
-              var audio = document.getElementById("audio");
-              var audio1 = document.getElementById("audio1");
-              var audio2 = document.getElementById("audio2");
-              var elem = document.getElementById("image");
-              console.log(elem.src);
-                    if (elem.src == "<?php $_SERVER["DOCUMENT_ROOT"]?>images/monkies.jpg") {
-                        audio.play();
-                    } else if (elem.src == "file:///C:/xampp/htdocs/Object-constructors-Ecosystems/images/polarbears.jpg") {
-                        audio1.play();
-                    } else if (elem.src == "file:///C:/xampp/htdocs/Object-constructors-Ecosystems/images/coyotes.jpg") {
-                        audio2.play();
-                    }
+           function playAudio(parameter) {
+            document.querySelector('.btn1');
+               var audio = document.getElementById(parameter);
+               audio.play();
+           }
+        //       var audio1 = document.getElementById("audio1");
+        //       var audio2 = document.getElementById("audio2");
+        //       var elem = document.getElementById("image");
+        //       console.log(elem.src);
+        //             if (elem.src == "<?php echo $_SERVER['DOCUMENT_ROOT']?>Object-constructors-Ecosystems/images/monkies.jpg") {
+        //                 audio.play();
+        //             } else if (elem.src == "file:///C:/xampp/htdocs/Object-constructors-Ecosystems/images/polarbears.jpg") {
+        //                 audio1.play();
+        //             } else if (elem.src == "file:///C:/xampp/htdocs/Object-constructors-Ecosystems/images/coyotes.jpg") {
+        //                 audio2.play();
+        //             }
                // let audio = document.getElementById("audio");
                // audio.src="monkey2.mp3";
                    // } else if (elem.src == "images/polarbears.jpg") {
@@ -103,7 +110,7 @@ if (event.target.classList.contains("btn1")) {
                 
                 
             
-            }
+            //}
 
          
         // Copy the index.html and replace everything inside the onLoad function with your own logic
