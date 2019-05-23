@@ -1,5 +1,6 @@
 body {
     font-family: 'Trebuchet MS';
+    background-color: lightgoldenrodyellow;
 }
 
 .ecosystems {
@@ -92,7 +93,13 @@ body {
 }
 input {
 
-    right: 0;
+
+    position: absolute;
+    z-index: 10;
+    right: 18%;
+    background-color: black;
+    color: white;
+    width: 200px;
 }
 .image:hover {
     animation: shake 0.5s;

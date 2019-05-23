@@ -12,7 +12,7 @@
 
 </head>
 
-<body onload="onLoaded()">
+<body>
 
 
     <!-- <img class="monkeys" src="images/monkies.jpg">
@@ -23,11 +23,13 @@
         <div class="ecosystem one">
 
             <div class="card one">
-                <button class="btn1">Tropical rainforest</button>
+                <button class="btn1"  onclick="slideToggle()">Tropical rainforest</button>
                 <img class="image" id="imageone">
-            </div>
-            <input type="button" value="PLAY" onclick="playAudio()">
+                <input type="button" value="CLICK ME FOR SOUND" onclick="playAudio()" class="soundbutton1">
             </input>
+            </div>
+           
+        
             <audio id="audio">
                 <source src="sounds/monkey2.mp3">
             </audio>
@@ -36,11 +38,12 @@
 
         <div class="ecosystem two">
             <div class="card two">
-                <button class="btn2">Tundra</button>
+                <button class="btn2" onclick="slideToggle()">Tundra</button>
                 <img class="image" id="imagetwo">
-            </div>
-            <input type="button" value="PLAY" onclick="playAudio()">
+                <input type="button" value="CLICK ME FOR SOUND" onclick="playAudio()" class="soundbutton2">
             </input>
+            </div>
+         
             <audio id="audio1">
                 <source src="sounds/bear_polar.wav">
 
@@ -49,11 +52,12 @@
 
         <div class="ecosystem three">
             <div class="card three">
-                <button class="btn3">Desert</button>
+                <button class="btn3" onclick="slideToggle()">Desert</button>
                 <img class="image" id="imagethree">
-            </div>
-            <input type="button" value="PLAY" onclick="playAudio()">
+                <input type="button" value="CLICK ME FOR SOUND" onclick="playAudio()" class="soundbutton3">
             </input>
+            </div>
+          
             <audio id="audio2">
                 <source src="sounds/Coyote.mp3">
             </audio>
@@ -61,11 +65,12 @@
         </div>
         <div class="ecosystem four">
             <div class="card four">
-                <button class="btn4">Temperate Forest</button>
+                <button class="btn4" onclick="slideToggle()">Temperate Forest</button>
                 <img class="image" id="imagefour">
-            </div>
-            <input type="button" value="PLAY" onclick="playAudio()">
+                <input type="button" value="CLICK ME FOR SOUND" onclick="playAudio()" class="soundbutton4">
             </input>
+            </div>
+          
             <audio id="audio2">
                 <source src="Coyote.mp3">
             </audio>
@@ -73,11 +78,12 @@
         </div>
         <div class="ecosystem five">
             <div class="card five">
-                <button class="btn5">Grasslands</button>
+                <button class="btn5" onclick="slideToggle()">Grasslands</button>
                 <img class="image" id="imagefive">
-            </div>
-            <input type="button" value="PLAY" onclick="playAudio()">
+                <input type="button" value="CLICK ME FOR SOUND"  onclick="playAudio()" class="soundbutton5">
             </input>
+            </div>
+           
             <audio id="audio2">
                 <source src="Coyote.mp3">
             </audio>
@@ -85,11 +91,12 @@
         </div>
         <div class="ecosystem six">
                 <div class="card six">
-                    <button class="btn6">Taiga</button>
+                    <button class="btn6" onclick="slideToggle()">Taiga</button>
                     <img class="image" id="imagesix">
-                </div>
-                <input type="button" value="PLAY" onclick="playAudio()">
+                    <input type="button" value="CLICK ME FOR SOUND"  onclick="playAudio()" class="soundbutton6">
                 </input>
+                </div>
+               
                 <audio id="audio2">
                     <source src="Coyote.mp3">
                 </audio>
@@ -97,11 +104,12 @@
             </div>
             <div class="ecosystem seven">
                     <div class="card seven">
-                        <button class="btn7">Ocean</button>
+                        <button class="btn7" onclick="slideToggle()">Ocean</button>
                         <img class="image" id="imageseven">
-                    </div>
-                    <input type="button" value="PLAY" onclick="playAudio()">
+                        <input type="button" value="CLICK ME FOR SOUND" onclick="playAudio()" class="soundbutton7">
                     </input>
+                    </div>
+                    
                     <audio id="audio2">
                         <source src="Coyote.mp3">
                     </audio>
@@ -195,7 +203,41 @@
             console.log(audio);
         }
 
+// // var open = true;
+// var widthChecked = false;
+// var initWidth = 0;
+// var intval = null;
 
+// function slideToggle() {
+//     window.clearInterval(intval);
+//     var imageSlide = document.querySelector(".image");
+//     if(!widthChecked) {
+//         initWidth = imageSlide.offsetWidth;
+//         WidthChecked = true;
+//     }
+//     // if(open) {
+//     //     var w = initWidth;
+//     //     open = false;
+//     //     intval = setInterval(function(){
+// 	// 		w--;
+// 	// 		imageSlide.style.width = w + 'px';
+// 	// 		if(w >= 0)
+// 	// 			window.clearInterval(intval);
+// 	// 		}, 1
+// 	// 	);
+//     // }
+//     // else {
+//         var w = 0;
+//         // open = true;
+// 	    intval = setInterval(function(){
+// 			w++;
+// 			imageSlide.style.width = w + 'px';
+// 			if(w >= initWidth)
+// 				window.clearInterval(intval);
+// 			}, 1
+// 		);
+//     }
+// }
 
         // function playAudio() {
         //     var audio = document.getElementById("audio");
