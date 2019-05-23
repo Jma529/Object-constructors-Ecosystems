@@ -1,7 +1,14 @@
-#image {
+.ecosystems {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.image {
   
     height: 400px;
-    display: block;
+   
+    width:50%;
 }
 
 .active {
@@ -10,3 +17,36 @@
     
 }
 
+.ecosystem {
+    width: 100%;
+}
+.card {
+    display: flex;
+    position: relative;
+}
+   
+   
+.btn1, .btn2, .btn3 {
+    width: 50%;
+    
+}
+
+.btn1 {
+  background-color: green;
+  color: white;
+}
+
+.btn2 {
+    background-color: silver;
+    color: black;
+}
+
+.btn3 {
+    background-color: burlywood;
+    color: gray;
+}
+
+input {
+    position: absolute;
+    right: 0;
+}

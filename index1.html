@@ -8,39 +8,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" type="text/css" rel="stylesheet">
     <H1>Learn about the Ecosystems!</H1>
+    <p class="info"></p>
 
 </head>
 
 <body onload="onLoaded()">
-    <p id="info"></p>
+
 
     <!-- <img class="monkeys" src="images/monkies.jpg">
     <img class="bears" src="images/polarbears.jpg">
     <img class="coyote" src="images/coyotes.jpg"> -->
     <!-- Two buttons-->
-    <button class="btn1">Rainforest</button>
-    <button class="btn2">Tundra</button>
-    <button class="btn3">Desert</button>
-    <div class="imagesound">
-        <img id="image">
-        <input type="button" value="PLAY" onclick="playAudio()">
-        </input>
-        <audio id="audio">
-        </audio>
+    <div class="ecosystems">
+        <div class="ecosystem one">
+
+            <div class="card one">
+                <button class="btn1">Tropical rainforest</button>
+                <img class="image" id="imageone">
+            </div>
+            <input type="button" value="PLAY" onclick="playAudio()">
+            </input>
+            <audio id="audio">
+            </audio>
+
+        </div>
+
+        <div class="ecosystem two">
+            <p class="info"></p>
+            <div class="card two">
+                <button class="btn2">Tundra</button>
+                <img class="image" id="imagetwo">
+            </div>
+            <input type="button" value="PLAY" onclick="playAudio()">
+            </input>
+            <audio id="audio">
+            </audio>
+        </div>
+
+        <div class="ecosystem three">
+            <p class="info"></p>
+            <div class="card three">
+                <button class="btn3">Desert</button>
+                <img class="image" id="imagethree">
+            </div>
+            <input type="button" value="PLAY" onclick="playAudio()">
+            </input>
+            <audio id="audio">
+            </audio>
+        </div>
+        <div class="ecosystem four">
+                <p class="info"></p>
+                <div class="card three">
+                    <button class="btn4">Temperate Forest</button>
+                    <img class="image" id="imagethree">
+                </div>
+                <input type="button" value="PLAY" onclick="playAudio()">
+                </input>
+                <audio id="audio">
+                </audio>
+            </div>
+
     </div>
+
+
     <script>
-          function playAudio() {
-            
-                let audio = document.getElementById("audio");
-                audio.src="monkey2.mp3";
+        function playAudio() {
+
+            let audio = document.getElementById("audio");
+            audio.src = "monkey2.mp3";
             //   } else if(document.getElementById('image').src == "polarbears.jpg") {
             //     let audio = document.getElementById("audio")
             //     audio.src = "bear_polar.wav";
-                audio.play();
-                console.log(audio);
-            }
+            audio.play();
+            console.log(audio);
+        }
 
-         
+
         // Copy the index.html and replace everything inside the onLoad function with your own logic
         // Should have a different constructor (e.g. animal, spaceship, or some other real world entity)
         // Should have two seperate instances of the constructor
@@ -60,8 +103,12 @@
 
             // three instances of ecosystems
             var rainForest = new ecoSystem('rainforest', 'humid', 'monkeys');
-            var tundra = new ecoSystem('tundra', 'snowy', 'polar bears');
+            var tundra = new ecoSystem('tundra', 'cold', 'polar bears');
             var desert = new ecoSystem('desert', 'hot', 'coyotes');
+            var temperateForest = new ecoSystem ('temperate forest', 'fresh', 'squirrels');
+            var grasslands = new ecoSystem ('grasslands', 'dry', 'lions');
+            var taiga = new ecoSystem ('taiga', 'snowy', 'wolves');
+            var ocean = new ecoSystem ('ocean', 'wet', 'sharks');
             // btn1 Click
             // alert ecosystem1 
 
@@ -76,21 +123,23 @@
             document.addEventListener('click', function (e) {
 
                 if (event.target.classList.contains("btn1")) {
-                    document.getElementById("image").src = "images/monkies.jpg";
+                    document.getElementById("imageone").src = "images/monkies.jpg";
                     //    console.log('Ecosystem one is a ' +rainForest.name + ' that is ' + rainForest.weather +  ' that has ' + rainForest.animal);
-                    document.querySelector('#info').innerHTML = 'The ' + rainForest.info();
+                    document.querySelector('.info').innerHTML = 'The ' + rainForest.info();
                     //    document.querySelector('.monkeys').classList.add('active');
                     //    removeClass();
                     //    document.querySelector('.bears').classList.remove('active');
                     //    document.querySelector('.coyote').classList.remove('active');
                 } else if (event.target.classList.contains("btn2")) {
-                    document.getElementById("image").src = "images/polarbears.jpg";
-                    document.querySelector('#info').innerHTML = 'The ' + tundra.info();
+                    document.getElementById("imagetwo").src = "images/polarbears.jpg";
+                    document.querySelector('.info').innerHTML = 'The ' + tundra.info();
                     //    document.querySelector('.bears').classList.toggle('active');
                 } else if (event.target.classList.contains("btn3")) {
-                    document.getElementById("image").src = "images/coyotes.jpg";
-                    document.querySelector('#info').innerHTML = 'The ' + desert.info();
+                    document.getElementById("imagethree").src = "images/coyotes.jpg";
+                    document.querySelector('.info').innerHTML = 'The ' + desert.info();
                     //    document.querySelector('.coyote').classList.toggle('active');
+                } else if (event.target.classList.contains("btn4")) {
+                    document.getElementById("imagefour").src = "images/squirrel.jpg";
 
                 }
                 //    
@@ -120,9 +169,9 @@
 
             //    console.log('The ecosystem is a' + rainForest.info());
 
-            document.querySelector('#info').innerHTML = 'Click to see the result appear!';
+            document.querySelector('.info').innerHTML = 'Click to see the result appear!';
 
-          
+
 
         }
     </script>
