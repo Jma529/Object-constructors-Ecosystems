@@ -111,6 +111,7 @@
 
                     if (event.target.classList.contains("btn1")) {
                         document.getElementById("imageone").src = "images/monkies.jpg";
+                        
                         //    console.log('Ecosystem one is a ' +rainForest.name + ' that is ' + rainForest.weather +  ' that has ' + rainForest.animal);
                         document.querySelector('.info').innerHTML = 'The ' + rainForest.info();
                         //    document.querySelector('.monkeys').classList.add('active');
@@ -135,13 +136,15 @@
                 });
                 //    
                 function playAudio() {
-
                     let audio = document.getElementById("audio");
-                    audio.src = "monkey2.mp3";
+                        audio.src = "monkey2.mp3";
+                        audio.play();
+                    // let audio = document.getElementById("audio");
+                    // audio.src = "monkey2.mp3";
                     //   } else if(document.getElementById('image').src == "polarbears.jpg") {
                     //     let audio = document.getElementById("audio")
                     //     audio.src = "bear_polar.wav";
-                    audio.play();
+                    // audio.play();
                     console.log(audio);
                 }
 
