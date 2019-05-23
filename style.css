@@ -1,8 +1,13 @@
+body {
+    font-family: 'Trebuchet MS';
+}
+
 .ecosystems {
     display: flex;
     flex-direction: column;
+ 
 }
-
+ 
 
 .image {
   
@@ -33,37 +38,57 @@
 }
 
 .btn1 {
-  background-color: green;
+
   color: white;
+  background-image: url("images/rainforest.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .btn2 {
-    background-color: silver;
+
     color: black;
+    background-image: url("images/tundra.jpg");
+    background-position: center;
+  background-size: cover;
 }
 
 .btn3 {
-    background-color: burlywood;
-    color: gray;
+    
+    color: black;
+    background-image: url("images/desert.jpg");
+    background-position: center;
+  background-size: cover;
 }
 
 .btn4 {
-    background-color: darkgreen;
-    color: white;
+ 
+    color: lightgreen;
+    background-image: url("images/forest.jpg");
+    background-position: center;
+  background-size: cover;
+    
 }
 
 .btn5 {
-    background-color:tan;
-    color: black;
+
+    color: orangered;
+    background-image: url("images/grasslands.jpg");
+    background-position: center;
+  background-size: cover;
 }
 .btn6 {
-    background-color: darkgray;
-    color: black;
+    color: whitesmoke;
+    background-image: url("images/taiga.jpg");
+    background-position: center;
+  background-size: cover;
 }
 
 .btn7 {
-    color: lightblue;
-    background-color: darkblue;
+    color: white;
+    background-image: url("images/ocean.jpg");
+    background-position: center;
+  background-size: cover;
 }
 input {
 

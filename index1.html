@@ -7,8 +7,8 @@
     <title>Ecosystems</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" type="text/css" rel="stylesheet">
-    <H1>Learn about the Ecosystems!</H1>
-    <p id="info"></p>
+    <H1>Learn about all the Ecosystems!</H1>
+    <p>Click on the name to see some fun facts about the ecosystem!</p>
 
 </head>
 
@@ -135,11 +135,11 @@
 
         // three instances of ecosystems
         var rainForest = new ecoSystem('tropical rainforest', 'humid', 'monkeys');
-        var tundra = new ecoSystem('tundra', 'cold', 'polar bears');
+        var tundra = new ecoSystem('tundra', 'snowy', 'polar bears');
         var desert = new ecoSystem('desert', 'hot', 'coyotes');
         var temperateForest = new ecoSystem('temperate forest', 'fresh', 'squirrels');
         var grasslands = new ecoSystem('grasslands', 'dry', 'lions');
-        var taiga = new ecoSystem('taiga', 'snowy', 'wolves');
+        var taiga = new ecoSystem('taiga', 'cold', 'wolves');
         var ocean = new ecoSystem('ocean', 'vast', 'sharks');
 
 
@@ -148,33 +148,33 @@
             if (event.target.classList.contains("btn1")) {
                 document.getElementById("imageone").src = "images/monkies.jpg";
                 //    console.log('Ecosystem one is a ' +rainForest.name + ' that is ' + rainForest.weather +  ' that has ' + rainForest.animal);
-                document.querySelector('#info').innerHTML = 'The ' + rainForest.info();
+                document.querySelector('.btn1').innerHTML = 'The ' + rainForest.info();
                 //    document.querySelector('.monkeys').classList.add('active');
                 //    removeClass();
                 //    document.querySelector('.bears').classList.remove('active');
                 //    document.querySelector('.coyote').classList.remove('active');
             } else if (event.target.classList.contains("btn2")) {
                 document.getElementById("imagetwo").src = "images/polarbears.jpg";
-                document.querySelector('#info').innerHTML = 'The ' + tundra.info();
+                document.querySelector('.btn2').innerHTML = 'The ' + tundra.info();
                 //    document.querySelector('.bears').classList.toggle('active');
             } else if (event.target.classList.contains("btn3")) {
                 document.getElementById("imagethree").src = "images/coyotes.jpg";
-                document.querySelector('#info').innerHTML = 'The ' + desert.info();
+                document.querySelector('.btn3').innerHTML = 'The ' + desert.info();
                 //    document.querySelector('.coyote').classList.toggle('active');
             } else if (event.target.classList.contains("btn4")) {
                 document.getElementById("imagefour").src = "images/squirrel.jpg";
-                document.querySelector('#info').innerHTML = 'The ' + temperateForest.info();
+                document.querySelector('.btn4').innerHTML = 'The ' + temperateForest.info();
             } else if (event.target.classList.contains("btn5")) {
                 document.getElementById("imagefive").src = "images/lion.jpg";
-                document.querySelector('#info').innerHTML = 'The ' + grasslands.info();
+                document.querySelector('.btn5').innerHTML = 'The ' + grasslands.info();
                 //    
             } else if (event.target.classList.contains("btn6")) {
                 document.getElementById("imagesix").src = "images/wolves.jpg";
-                document.querySelector('#info').innerHTML = 'The ' + taiga.info();
+                document.querySelector('.btn6').innerHTML = 'The ' + taiga.info();
                 //    
             } else if (event.target.classList.contains("btn7")) {
                 document.getElementById("imageseven").src = "images/sharks.jpg";
-                document.querySelector('#info').innerHTML = 'The ' + ocean.info();
+                document.querySelector('.btn7').innerHTML = 'The ' + ocean.info();
                 //    
             }
 
@@ -270,12 +270,12 @@
         //    Try give the contructor a method called getName that returns both the first and last name as one string
 
         //    console.log('The ecosystem is a' + rainForest.info());
-        function onLoaded() {
-            document.querySelector('#info').innerHTML = 'Click to see the result appear!';
+        // function onLoaded() {
+        //     document.querySelector('#info').innerHTML = 'Click to see the result appear!';
 
 
 
-        }
+        // }
     </script>
 </body>
 
