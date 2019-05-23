@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Object Constructors JS</title>
+    <title>Ecosystems</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" type="text/css" rel="stylesheet">
     <H1>Learn about the Ecosystems!</H1>
-    <p class="info"></p>
+    <p id="info"></p>
 
 </head>
 
@@ -29,13 +29,12 @@
             <input type="button" value="PLAY" onclick="playAudio()">
             </input>
             <audio id="audio">
-                <source src="monkey2.mp3">
+                <source src="sounds/monkey2.mp3">
             </audio>
 
         </div>
 
         <div class="ecosystem two">
-            <p class="info"></p>
             <div class="card two">
                 <button class="btn2">Tundra</button>
                 <img class="image" id="imagetwo">
@@ -43,16 +42,27 @@
             <input type="button" value="PLAY" onclick="playAudio()">
             </input>
             <audio id="audio1">
-                <source src="bear_polar.wav">
+                <source src="sounds/bear_polar.wav">
 
             </audio>
         </div>
 
         <div class="ecosystem three">
-            <p class="info"></p>
             <div class="card three">
                 <button class="btn3">Desert</button>
                 <img class="image" id="imagethree">
+            </div>
+            <input type="button" value="PLAY" onclick="playAudio()">
+            </input>
+            <audio id="audio2">
+                <source src="sounds/Coyote.mp3">
+            </audio>
+
+        </div>
+        <div class="ecosystem four">
+            <div class="card four">
+                <button class="btn4">Temperate Forest</button>
+                <img class="image" id="imagefour">
             </div>
             <input type="button" value="PLAY" onclick="playAudio()">
             </input>
@@ -61,172 +71,212 @@
             </audio>
 
         </div>
-        <div class="ecosystem four">
-            <p class="info"></p>
-            <div class="card three">
-                <button class="btn4">Temperate Forest</button>
-                <img class="image" id="imagefour">
+        <div class="ecosystem five">
+            <div class="card five">
+                <button class="btn5">Grasslands</button>
+                <img class="image" id="imagefive">
             </div>
             <input type="button" value="PLAY" onclick="playAudio()">
             </input>
-            <audio id="audio">
+            <audio id="audio2">
+                <source src="Coyote.mp3">
             </audio>
+
         </div>
+        <div class="ecosystem six">
+                <div class="card six">
+                    <button class="btn6">Taiga</button>
+                    <img class="image" id="imagesix">
+                </div>
+                <input type="button" value="PLAY" onclick="playAudio()">
+                </input>
+                <audio id="audio2">
+                    <source src="Coyote.mp3">
+                </audio>
+    
+            </div>
+            <div class="ecosystem seven">
+                    <div class="card seven">
+                        <button class="btn7">Taiga</button>
+                        <img class="image" id="imageseven">
+                    </div>
+                    <input type="button" value="PLAY" onclick="playAudio()">
+                    </input>
+                    <audio id="audio2">
+                        <source src="Coyote.mp3">
+                    </audio>
+        
+                </div>
+    </div>
 
 
 
 
-        <script>
-            // Copy the index.html and replace everything inside the onLoad function with your own logic
-            // Should have a different constructor (e.g. animal, spaceship, or some other real world entity)
-            // Should have two seperate instances of the constructor
-            // Btn click event should invoke a function of objects and alert a result
+    <script>
+        // Copy the index.html and replace everything inside the onLoad function with your own logic
+        // Should have a different constructor (e.g. animal, spaceship, or some other real world entity)
+        // Should have two seperate instances of the constructor
+        // Btn click event should invoke a function of objects and alert a result
 
-            //Try add a 3rd button and object
-
-            function ecoSystem(name, weather, animal) {
+        //Try add a 3rd button and object
 
 
-                function ecoSystem(name, weather, animal) {
+        function ecoSystem(name, weather, animal) {
 
-                    this.name = name;
-                    this.weather = weather;
-                    this.animal = animal;
-                    this.info = function () {
-                        return ' ' + this.name + ' is ' + this.weather + ' and has ' + this.animal;
-                    };
-
-                }
-
-                // three instances of ecosystems
-                var rainForest = new ecoSystem('rainforest', 'humid', 'monkeys');
-                var tundra = new ecoSystem('tundra', 'cold', 'polar bears');
-                var desert = new ecoSystem('desert', 'hot', 'coyotes');
-                var temperateForest = new ecoSystem('temperate forest', 'fresh', 'squirrels');
-                var grasslands = new ecoSystem('grasslands', 'dry', 'lions');
-                var taiga = new ecoSystem('taiga', 'snowy', 'wolves');
-                var ocean = new ecoSystem('ocean', 'wet', 'sharks');
-
-                document.addEventListener('click', function (e) {
-
-                    if (event.target.classList.contains("btn1")) {
-                        document.getElementById("imageone").src = "images/monkies.jpg";
-                        //    console.log('Ecosystem one is a ' +rainForest.name + ' that is ' + rainForest.weather +  ' that has ' + rainForest.animal);
-                        document.querySelector('.info').innerHTML = 'The ' + rainForest.info();
-                        //    document.querySelector('.monkeys').classList.add('active');
-                        //    removeClass();
-                        //    document.querySelector('.bears').classList.remove('active');
-                        //    document.querySelector('.coyote').classList.remove('active');
-                    } else if (event.target.classList.contains("btn2")) {
-                        document.getElementById("imagetwo").src = "images/polarbears.jpg";
-                        document.querySelector('.info').innerHTML = 'The ' + tundra.info();
-                        //    document.querySelector('.bears').classList.toggle('active');
-                    } else if (event.target.classList.contains("btn3")) {
-                        document.getElementById("imagethree").src = "images/coyotes.jpg";
-                        document.querySelector('.info').innerHTML = 'The ' + desert.info();
-                        //    document.querySelector('.coyote').classList.toggle('active');
-                    } else if (event.target.classList.contains("btn4")) {
-                        document.getElementById("imagefour").src = "images/squirrel.jpg";
-
-                    }
-                    //    
+            this.name = name;
+            this.weather = weather;
+            this.animal = animal;
+            this.info = function () {
+                return ' ' + this.name + ' is ' + this.weather + ' and has ' + this.animal;
+            };
+        }
 
 
-                });
+
+        // three instances of ecosystems
+        var rainForest = new ecoSystem('tropical rainforest', 'humid', 'monkeys');
+        var tundra = new ecoSystem('tundra', 'cold', 'polar bears');
+        var desert = new ecoSystem('desert', 'hot', 'coyotes');
+        var temperateForest = new ecoSystem('temperate forest', 'fresh', 'squirrels');
+        var grasslands = new ecoSystem('grasslands', 'dry', 'lions');
+        var taiga = new ecoSystem('taiga', 'snowy', 'wolves');
+        var ocean = new ecoSystem('ocean', 'vast', 'sharks');
+
+
+        document.addEventListener('click', function (e) {
+
+            if (event.target.classList.contains("btn1")) {
+                document.getElementById("imageone").src = "images/monkies.jpg";
+                //    console.log('Ecosystem one is a ' +rainForest.name + ' that is ' + rainForest.weather +  ' that has ' + rainForest.animal);
+                document.querySelector('#info').innerHTML = 'The ' + rainForest.info();
+                //    document.querySelector('.monkeys').classList.add('active');
+                //    removeClass();
+                //    document.querySelector('.bears').classList.remove('active');
+                //    document.querySelector('.coyote').classList.remove('active');
+            } else if (event.target.classList.contains("btn2")) {
+                document.getElementById("imagetwo").src = "images/polarbears.jpg";
+                document.querySelector('#info').innerHTML = 'The ' + tundra.info();
+                //    document.querySelector('.bears').classList.toggle('active');
+            } else if (event.target.classList.contains("btn3")) {
+                document.getElementById("imagethree").src = "images/coyotes.jpg";
+                document.querySelector('#info').innerHTML = 'The ' + desert.info();
+                //    document.querySelector('.coyote').classList.toggle('active');
+            } else if (event.target.classList.contains("btn4")) {
+                document.getElementById("imagefour").src = "images/squirrel.jpg";
+                document.querySelector('#info').innerHTML = 'The ' + temperateForest.info();
+            } else if (event.target.classList.contains("btn5")) {
+                document.getElementById("imagefive").src = "images/lion.jpg";
+                document.querySelector('#info').innerHTML = 'The ' + grasslands.info();
                 //    
-                function playAudio() {
-
-                    let audio = document.getElementById("audio");
-                    audio.src = "monkey2.mp3";
-                    //   } else if(document.getElementById('image').src == "polarbears.jpg") {
-                    //     let audio = document.getElementById("audio")
-                    //     audio.src = "bear_polar.wav";
-                    audio.play();
-                    console.log(audio);
-                }
-
-
-
-                // function playAudio() {
-                //     var audio = document.getElementById("audio");
-                //     var audio1 = document.getElementById("audio1");
-                //     var audio2 = document.getElementById("audio2");
-                //     var elem = document.getElementById("image");
-                //     console.log(elem.src);
-                //     if (elem.src == "<?php $_SERVER["
-                //         DOCUMENT_ROOT "]?>images/monkies.jpg") {
-                //         audio.play();
-                //     } else if (elem.src ==
-                //         "file:///C:/xampp/htdocs/Object-constructors-Ecosystems/images/polarbears.jpg") {
-                //         audio1.play();
-                //     } else if (elem.src ==
-                //         "file:///C:/xampp/htdocs/Object-constructors-Ecosystems/images/coyotes.jpg") {
-                //         audio2.play();
-                //     }
-                // let audio = document.getElementById("audio");
-                // audio.src="monkey2.mp3";
-                // } else if (elem.src == "images/polarbears.jpg") {
-                //     let audio = document.getElementById("audio");
-                //   audio.src = "bear_polar.wav"
-                // }
-                //   } else if(document.getElementById('image').src == "polarbears.jpg") {
-                //     let audio = document.getElementById("audio")
-                //     audio.src = "bear_polar.wav";
-
-
-
+            } else if (event.target.classList.contains("btn6")) {
+                document.getElementById("imagesix").src = "images/wolves.jpg";
+                document.querySelector('#info').innerHTML = 'The ' + taiga.info();
+                //    
+            } else if (event.target.classList.contains("btn7")) {
+                document.getElementById("imageseven").src = "images/sharks.jpg";
+                document.querySelector('#info').innerHTML = 'The ' + ocean.info();
+                //    
             }
 
 
-            // Copy the index.html and replace everything inside the onLoad function with your own logic
-            // Should have a different constructor (e.g. animal, spaceship, or some other real world entity)
-            // Should have two seperate instances of the constructor
-            // Btn click event should invoke a function of objects and alert a result
-
-            //Try add a 3rd button and object
 
 
-            // btn1 Click
-            // alert ecosystem1 
+        });
 
-            //     let activeArray = Array.from(document.querySelectorAll('.active'));
+        //    
+        function playAudio() {
 
-            //     function removeClass() {
-            //         activeArray.forEach(node => {
-            //             node.classList.remove('active');
-            //         })
-
-            //    };
-
-
-            // btn2 Click
-            // alert ecosystem2
-
-            //    document.querySelector('#btn2').addEventListener('click', function(e) {
-            //    console.log('Ecosystem two is a ' +tundra.name + ' that is ' +  tundra.weather + ' that has ' + tundra.animal);
+            let audio = document.getElementById("audio");
+            audio.src = "sounds/monkey2.mp3";
+            //   } else if(document.getElementById('image').src == "polarbears.jpg") {
+            //     let audio = document.getElementById("audio")
+            //     audio.src = "bear_polar.wav";
+            audio.play();
+            console.log(audio);
+        }
 
 
 
-            //    });
-            //  alert ecosystem3
+        // function playAudio() {
+        //     var audio = document.getElementById("audio");
+        //     var audio1 = document.getElementById("audio1");
+        //     var audio2 = document.getElementById("audio2");
+        //     var elem = document.getElementById("image");
+        //     console.log(elem.src);
+        //     if (elem.src == "<?php $_SERVER["
+        //         DOCUMENT_ROOT "]?>images/monkies.jpg") {
+        //         audio.play();
+        //     } else if (elem.src ==
+        //         "file:///C:/xampp/htdocs/Object-constructors-Ecosystems/images/polarbears.jpg") {
+        //         audio1.play();
+        //     } else if (elem.src ==
+        //         "file:///C:/xampp/htdocs/Object-constructors-Ecosystems/images/coyotes.jpg") {
+        //         audio2.play();
+        //     }
+        // let audio = document.getElementById("audio");
+        // audio.src="monkey2.mp3";
+        // } else if (elem.src == "images/polarbears.jpg") {
+        //     let audio = document.getElementById("audio");
+        //   audio.src = "bear_polar.wav"
+        // }
+        //   } else if(document.getElementById('image').src == "polarbears.jpg") {
+        //     let audio = document.getElementById("audio")
+        //     audio.src = "bear_polar.wav";
 
-            //    document.querySelector('#btn3').addEventListener('click', function(e) {
-            //    console.log('Ecosystem three is a ' + desert.name + ' that is ' + desert.weather + ' that has ' + desert.animal);
 
 
 
-            //    });
-
-            //    Try give the contructor a method called getName that returns both the first and last name as one string
-
-            //    console.log('The ecosystem is a' + rainForest.info());
-            function onLoaded() {
-                document.querySelector('.info').innerHTML = 'Click to see the result appear!';
 
 
+        // Copy the index.html and replace everything inside the onLoad function with your own logic
+        // Should have a different constructor (e.g. animal, spaceship, or some other real world entity)
+        // Should have two seperate instances of the constructor
+        // Btn click event should invoke a function of objects and alert a result
 
-            }
-        </script>
+        //Try add a 3rd button and object
+
+
+        // btn1 Click
+        // alert ecosystem1 
+
+        //     let activeArray = Array.from(document.querySelectorAll('.active'));
+
+        //     function removeClass() {
+        //         activeArray.forEach(node => {
+        //             node.classList.remove('active');
+        //         })
+
+        //    };
+
+
+        // btn2 Click
+        // alert ecosystem2
+
+        //    document.querySelector('#btn2').addEventListener('click', function(e) {
+        //    console.log('Ecosystem two is a ' +tundra.name + ' that is ' +  tundra.weather + ' that has ' + tundra.animal);
+
+
+
+        //    });
+        //  alert ecosystem3
+
+        //    document.querySelector('#btn3').addEventListener('click', function(e) {
+        //    console.log('Ecosystem three is a ' + desert.name + ' that is ' + desert.weather + ' that has ' + desert.animal);
+
+
+
+        //    });
+
+        //    Try give the contructor a method called getName that returns both the first and last name as one string
+
+        //    console.log('The ecosystem is a' + rainForest.info());
+        function onLoaded() {
+            document.querySelector('#info').innerHTML = 'Click to see the result appear!';
+
+
+
+        }
+    </script>
 </body>
 
 </html>

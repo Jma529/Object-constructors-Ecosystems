@@ -7,7 +7,6 @@
 .image {
   
     height: 400px;
-   
     width:50%;
 }
 
@@ -26,8 +25,9 @@
 }
    
    
-.btn1, .btn2, .btn3 {
+.btn1, .btn2, .btn3, .btn4, .btn5, .btn6, .btn7 {
     width: 50%;
+    font-size: 3em;
     
 }
 
@@ -46,11 +46,29 @@
     color: gray;
 }
 
+.btn4 {
+    background-color: darkgreen;
+    color: white;
+}
+
+.btn5 {
+    background-color:tan;
+    color: black;
+}
+.btn6 {
+    background-color: darkgray;
+    color: black;
+}
+
+.btn7 {
+    color: lightblue;
+    background-color: darkblue;
+}
 input {
-    position: absolute;
+
     right: 0;
 }
-#image:hover {
+.image:hover {
     animation: shake 0.5s;
     animation-iteration-count: infinite;
   }
